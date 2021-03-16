@@ -1,5 +1,6 @@
 'use strict';
 
+// let score = []
 let userName = prompt('What is your name?');
 alert('welcome ' + userName + ' to my website :)');
 
@@ -10,6 +11,7 @@ if(travelQuestion.toLowerCase() === 'yes')
 {
   console.log('That is right!');
   alert('That is right!');
+  // score.push(5)
 }
 else if(travelQuestion.toLowerCase() === 'no')
 {
@@ -24,6 +26,7 @@ if(movieQuestion.toLowerCase() === 'yes')
 {
   console.log('I hope we can watch one together :)');
   alert('I hope we can watch one together :)');
+  // score.push(5)
 }
 else if(movieQuestion.toLowerCase() === 'no')
 {
@@ -38,6 +41,7 @@ if(wakeupQuestion.toUpperCase() === 'YES')
 {
   console.log('Wakingup early is useful!');
   alert('Wakingup early is useful!');
+  // score.push(5)
 }
 else if(wakeupQuestion.toUpperCase() === 'NO')
 {
@@ -52,6 +56,7 @@ if(food.toLowerCase() === 'yes')
 {
   console.log('I eat lots of vegetables daily!');
   alert('I eat lots of vegetables daily!');
+  // score.push(5)
 }
 else if(food.toLowerCase() === 'no')
 {
@@ -71,6 +76,69 @@ else if(season.toLowerCase() === 'no')
 {
   console.log('I really hate summer!');
   alert('I really hate summer!');
+  // score.push(5)
 }
 
-alert('I wish you enjoy my game ' + userName);
+// let sum = 0;
+
+// for(let d=0 ; d < score.length ; d++){
+//   sum = sum + score[d];
+//   alert(score);
+// }
+
+// let guess = prompt('Guess a number between 0-50 ,You have 4 attempts');
+
+// let myNumb = '24';
+
+// for(let i=0 ;i < 4 ; i++ ){
+//   if(guess === myNumb){
+//     alert('Correct, you win!!!');
+//     break;
+//   }
+
+//   if (guess < myNumb) {
+//     alert('Your guess is too low!');
+//      prompt('Guess a number between 0-50 ,You have 4 attempts');
+
+//   }
+//   else if (guess > myNumb) {
+//     alert('Your guess is too high!');
+//      prompt('Guess a number between 0-50 ,You have 4 attempts');
+//   }
+// }
+// alert('Thanks for playing, hope you enjoyed!');
+
+let guess = prompt('Guess a number between 0-50');
+let myNumb = '24';
+let tryCout;
+tryCout = 3;
+for(let i = 0; i < 4; i++){
+  if(guess === myNumb){
+    alert('Correct, you win!!!');
+    break;
+  }
+  else if (guess < myNumb) {
+    alert('Your guess is too low!');
+    guess = prompt('Guess a number between 0-50 ,You have ' + tryCout + ' attempts');
+  }
+  else {
+    alert('Your guess is too high!');
+    guess = prompt('Guess a number between 0-50 ,You have ' + tryCout + ' attempts');
+  }
+  tryCout--;
+}
+alert('Lets paly a new game!');
+
+
+let choise = ['red' , 'pink' , 'yellow'];
+
+for(let i = 0 ; i< 6 ; i++){
+  let ans = prompt('Mention one of my favourite color');
+
+  for(let h = 0 ; h < choise.length ; h++){
+    if (ans === choise[h]) {
+      alert('Bravoo!!');
+      break;
+    }
+  }
+}
